@@ -1,0 +1,2 @@
+source /home/niklas-dathe/esp-projects/odrive-translator/build/gdbinit/symbols
+source /home/niklas-dathe/esp-projects/odrive-translator/build/gdbinit/connect

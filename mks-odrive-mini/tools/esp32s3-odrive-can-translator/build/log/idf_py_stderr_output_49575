@@ -1,0 +1,9 @@
+Command: cmake -G Ninja -B /home/niklas-dathe/esp-projects/odrive-translator/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/niklas-dathe/.espressif/python_env/idf6.0_py3.12_env/bin/python -DESP_PLATFORM=1 -DIDF_TARGET=esp32s3 -DCCACHE_ENABLE=False /home/niklas-dathe/esp-projects/odrive-translator
+Configuration Report               
+ ───────────────────────────────── 
+   Parser Version: 1               
+   Verbosity: default              
+   Defaults policy: sdkconfig      
+   Status: Finished successfully   
+                                   
+ ───────────────────────────────── 

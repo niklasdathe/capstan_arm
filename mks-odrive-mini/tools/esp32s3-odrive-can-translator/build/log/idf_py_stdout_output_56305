@@ -1,0 +1,8 @@
+Command: ninja all
+[1/4] cd /home/niklas-dathe/esp-projects/odrive-translator/build && /home/niklas-dathe/.espressif/python_env/idf6.0_py3.12_env/bin/python /home/niklas-dathe/.espressif/v6.0.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/niklas-dathe/esp-projects/odrive-translator/build/partition_table/partition-table.bin /home/niklas-dathe/esp-projects/odrive-translator/build/odrive-translator.bin
+odrive-translator.bin binary size 0x30100 bytes. Smallest app partition is 0x100000 bytes. 0xcff00 bytes (81%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /home/niklas-dathe/esp-projects/odrive-translator/build/bootloader && /home/niklas-dathe/.espressif/python_env/idf6.0_py3.12_env/bin/python /home/niklas-dathe/.espressif/v6.0.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/niklas-dathe/esp-projects/odrive-translator/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'
