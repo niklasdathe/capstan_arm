@@ -2,13 +2,24 @@
 ## Firmware version 0.5.6 upgrade
 The axes use a "Makerbase MKS XDRIVE 56 V" as their motor driver. One for each axis. The problem is that it ships with an old version of the Firmware (0.5.1). The following things have been done to be able to upgrade to firmware version 0.5.6, which is the last open source release. 
 ## Configuration
+### Motor Configuration
+```
 odrv0.config.enable_brake_resistor=true #connect brake resitor to terminal block  
 odrv0.axis0.motor.config.pole_pairs=39 #eagle power 8308 has 39 magnets  
 odrv0.axis0.motor.config.torque_constant=8.27/90 #set to 8.27 / (motor KV)  
 odrv0.axis0.motor.config.motor_type #TODO gimbal or high current  
-odrv0.axis0.encoder.config.cpr=16384 #TODO load and motor encoder - load: 16384cpr(spreadsheet), motor: 4096cpr?  
-
-
+```
+### Encoder Configuration
+#### Motor Encoder (Builtin - AS5047P)
+```
+odrv0.axis0.encoder.config.mode = ENCODER_MODE_SPI_ABS_AMS # absoulte encoder on spi interface
+odrv0.axis0.encoder.config.cpr=2**14 # 14 bit resolution  
+odrv0.axis0.encoder.config.abs_spi_cs_gpio_pin = 7  
+odrv0.save_configuration()  
+odrv0.reboot()  
+```
+#### Load Encoder (External - AS5048A)
+TODO
 # Original README:
 ![ODrive Logo](https://static1.squarespace.com/static/58aff26de4fcb53b5efd2f02/t/59bf2a7959cc6872bd68be7e/1505700483663/Odrive+logo+plus+text+black.png?format=1000w)
 
